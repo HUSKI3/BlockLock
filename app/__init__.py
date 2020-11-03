@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # Setup the app with the config.py file
-app.config.from_object('app.config')
+app.config.from_pyfile('config_dev.py')
 
 # Setup the logger
 from app.logger_setup import logger

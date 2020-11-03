@@ -13,6 +13,11 @@ def index():
 def map():
     return render_template('map.html', title='Map')
 
+@app.route('/apilogin')
+def apilogin():
+    
+    return render_template('apilogin.html', title='Nebl API Login')
+
 
 @app.route('/map/refresh', methods=['POST'])
 def map_refresh():

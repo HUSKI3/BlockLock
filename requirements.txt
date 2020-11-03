@@ -12,4 +12,4 @@ itsdangerous==0.24
 pytz==2016.10
 structlog==16.1.0
 termcolor==1.1.0
-WTForms==2.1
+WTForms==2.2
