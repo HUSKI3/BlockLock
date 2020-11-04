@@ -11,5 +11,18 @@
 	{% if current_user.is_authenticated %}
 	  	<h2 class="ui header">Hi {{ current_user.first_name }}!</h2>
 	{% endif %}
+	<h3 class="ui">Balance: {{bal}}</h2>
+	<h3 class="ui">Sent: {{sent}}</h2>
+	<h3 class="ui">Recieved: {{rec}}</h2>
+	<h3 class="ui">Transactions: {{tran}}</h2>
+		<form method="POST" action="{{ url_for('index') }}">
+			{{ form.csrf_token }}
+	
+			{{ form.name.label }} {{ form.name(size=20) }}
+			<br><br>
+			{{ form.starting }}
+			{{ form.ending }}
+	
+		</form>
 
 {% endblock %}
